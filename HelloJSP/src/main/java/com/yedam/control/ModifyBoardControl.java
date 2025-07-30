@@ -1,0 +1,38 @@
+package com.yedam.control;
+
+import java.io.IOException;
+
+import com.yedam.common.Control;
+import com.yedam.service.BoardService;
+import com.yedam.service.BoardServiceImpl;
+import com.yedam.vo.BoardVO;
+
+public class ModifyBoardControl implements Control {
+
+	@Override
+	public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+		// addboard.do?title=??&writer=??&content=???
+		String title =req.getParameter("title");
+		String writer =req.getParameter("writer");
+		String content =req.getParameter("content");
+		
+		//
+		BoardVO board = new BoardVO();
+		param.setTitle(title);
+		param.setContent(content);
+		param.setWriter(writer);
+		
+		BoardService svc = new BoardServiceImpl();
+		if(svc.registerBoard(param)) {
+			
+			resp.sendRedirect("boardList.do");
+		} else {
+			System.out.println("에러발생");
+		}
+	}
+
+}
+
+
+
