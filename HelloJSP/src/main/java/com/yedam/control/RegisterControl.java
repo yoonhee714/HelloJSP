@@ -14,7 +14,7 @@ public class RegisterControl implements Control {
 	public void execute(HttpServletRequest req, HttpServletResponse resp) 
 		throws ServletException, IOException {
 		
-			req.getRequestDispatcher("WEB-INF/html/register_form.jsp").forward(req, resp);
+			req.getRequestDispatcher("user/register_form.tiles").forward(req, resp);
 		
 		
 

@@ -18,14 +18,17 @@ public class BoardControl implements Control{
 			throws ServletException, IOException {
 		//parameter(?bno=3)
 		String bno = req.getParameter("bno");
+		String page = req.getParameter("page");
 		
 		BoardService svc = new BoardServiceImpl();
 		BoardVO board = svc.searchBoard(Integer.parseInt(bno));
-				
+		
+		//board info
 		req.setAttribute("board_info", board);
+		req.setAttribute("page", page);
 		
 		//요청 재지정
-		req.getRequestDispatcher("WEB-INF/html/board.jsp").forward(req, resp);
+		req.getRequestDispatcher("user/board.tiles").forward(req, resp);
 		
 		//System.out.println("글상세 컨트롤");
 	}

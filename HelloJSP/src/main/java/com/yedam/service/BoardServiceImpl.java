@@ -51,8 +51,23 @@ public class BoardServiceImpl implements BoardService{
 		return false;
 		
 	}
+
 	@Override
 	public int totalCount(SearchDTO search) {
+		// TODO Auto-generated method stub
 		return mapper.selectCount(search);
 	}
+
+	@Override
+	public boolean modifyBoard(BoardVO board) {
+		int r = mapper.insertBoard(board);
+		if (r>0) {
+			sqlSession.commit();
+			return true;
+		}
+		return false;
+	}
+
+
+
 }

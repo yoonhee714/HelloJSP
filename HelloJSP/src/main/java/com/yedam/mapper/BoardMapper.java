@@ -13,7 +13,7 @@ public interface BoardMapper {
 	public int insertBoard(BoardVO board); //insert
 	public int deleteBoard(int boardNo); //삭제
 	public int selectCount(SearchDTO search); //게시글 전체건수
-	public int updateBoard(BoardVO board);
 	public List<BoardVO> selectList(int page);
+	public int updateBoard(BoardVO board);//update
 	
 }
