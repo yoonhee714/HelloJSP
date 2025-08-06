@@ -15,18 +15,18 @@
 		Name: <input type = "text" id="mname"><br>
 		Point: <input type = "number" id="point"><br>
 		<button id = "addBtn">추가</button>
-	</div>
+	</div>	
 	<div style="display:none;">
 		<ul id="list"></ul>
 	</div>
 	
-	
-	<div>
+
+	<div style="display:none;">	
 		이름: <input type="text" id="std_name"><br>
 		점수: <input type="number" id="std_score"><br>
 		<button id="addList">추가</button>
 	</div>
-	<div>
+	<div style="display:none;">
 		<table border="2">
 			<thead>
 				<tr>
@@ -37,8 +37,40 @@
 		</table>
 	</div>	
 	
+	<div id="show">
+		<table border="2">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>FNmae</th>
+					<th>LName</th>
+					<th>Salary</th>
+					<th>삭제</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- 자동으로 들어가짐 -->
+			</tbody>
+		</table>
+	</div>
 	
-<script type="text/javascript" src='js/data.js'></script>
+	
+	<div id="item" style="display:none;">
+		<table border="2">
+			<thead>
+				<tr>
+					<th>이름</th>
+					<th>점수</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- 자동으로 들어가짐 -->
+			</tbody>
+		</table>
+	</div>
+	
+
+<script type="text/javascript" src='js/ajax2.js'></script>
 
 </body>
 </html>

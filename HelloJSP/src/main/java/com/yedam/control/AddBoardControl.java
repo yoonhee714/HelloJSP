@@ -17,7 +17,7 @@ public class AddBoardControl implements Control {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setCharacterEncoding("utf-8");
+		req.setCharacterEncoding("text/json;charset-utf-8");
 		
 		// key=value + 파일 -> 처리
 		// cos.jar 활용해서 multipart 요청을 처리
