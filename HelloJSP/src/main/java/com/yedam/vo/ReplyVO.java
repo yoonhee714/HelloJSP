@@ -11,6 +11,10 @@ public class ReplyVO {
 	private int   boardNo; 
 	private String reply;    
 	private String replyer;    
-	private Date replyDate;  
+	private Date replyDate;
+	//250807 달력이벤트
+	private String title;
+	private Date startDate; 
+	private Date endDate; 
 
 } 

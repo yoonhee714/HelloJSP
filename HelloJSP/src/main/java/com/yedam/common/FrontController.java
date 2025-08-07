@@ -14,6 +14,7 @@ import com.yedam.control.AddBoardControl;
 import com.yedam.control.AddReplyControl;
 import com.yedam.control.BoardControl;
 import com.yedam.control.BoardListControl;
+import com.yedam.control.ChartControl;
 import com.yedam.control.JSControl;
 import com.yedam.control.LoginControl;
 import com.yedam.control.LogoutControl;
@@ -23,6 +24,7 @@ import com.yedam.control.RegisterControl;
 import com.yedam.control.ReplyListControl;
 import com.yedam.control.SignFormControl;
 import com.yedam.control.SignUpControl;
+import com.yedam.control.TotalCntControl;
 import com.yedam.control.LoginFormControl;
 
 //init -service - detroy
@@ -59,8 +61,12 @@ public class FrontController extends HttpServlet {
 		map.put("/replyList.do", new ReplyListControl()); //글번호 - 댓글목록
 		map.put("/removeReply.do", new RemoveReplyControl()); //댓글 삭제 
 		map.put("/addReply.do", new AddReplyControl()); //글등록 
+		map.put("/totalReply.do", new TotalCntControl()); //글등록 para-> bno, json 문자열이 나오게 {"totalCnt": 78}
 		
-		
+		//기타
+		map.put("/chartData.do", new ChartControl()); 
+		//fullcalendar 목록
+		map.put("/eventList.do", new EventControl()); 
 	}
 	
 	@Override

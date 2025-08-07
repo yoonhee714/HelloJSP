@@ -30,8 +30,7 @@
 				src='upload/${board_info.image }'>
 			 </c:when>
 			</c:choose>
-			<img width="150px"
-				src='upload/${board_info.image }'></td>
+			</td>
 		</tr>
 		<tr>
 			<th>내용</th>
@@ -105,6 +104,12 @@
 				<span class="col-sm-2">삭제</span>
 			</li>
 			<li><hr /></li>
+			<li>
+				<span class="col-sm-2">12</span>
+				<span class="col-sm-5">댓글입니다</span>
+				<span class="col-sm-2">user01</span>
+				<span class="col-sm-2"><button>삭제</button></span>
+			</li>
 		</ul>
 	</div>
 	

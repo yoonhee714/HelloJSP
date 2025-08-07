@@ -37,4 +37,18 @@ public class ReplyServiceImpl implements Replyservice {
 			return false;
 	}
 
+	@Override
+	public int replyCount(int boardNo) {
+		int r = mapper.selectCount(boardNo);
+		
+		return r;
+	}
+
+	@Override
+	public List<ReplyVO> evenList() {
+	
+		return = mapper.evenList(title,startDate,endDate);
+	}
+
+
 }
