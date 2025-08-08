@@ -11,5 +11,4 @@ public interface ReplyMapper {
 	int deleteReply(int replyNo); //삭제
 	int insertReply(ReplyVO reply); //등록
 	int selectCount(int boardNo); //댓글건수계산
-	// 250827 event 목록, 추가, 삭제 -> mapper.xml에 추가
 }

@@ -13,8 +13,14 @@ public class ReplyVO {
 	private String replyer;    
 	private Date replyDate;
 	//250807 달력이벤트
-	private String title;
-	private Date startDate; 
-	private Date endDate; 
+	private String Title;
+	private Date StartDate; 
+	private Date EndDate;
+	public void setStartDate(String start) {
+		
+	}
+	public void setEndDate(String end) {
+		
+	} 
 
 } 

@@ -15,6 +15,7 @@ import com.yedam.control.AddReplyControl;
 import com.yedam.control.BoardControl;
 import com.yedam.control.BoardListControl;
 import com.yedam.control.ChartControl;
+import com.yedam.control.EventControl;
 import com.yedam.control.JSControl;
 import com.yedam.control.LoginControl;
 import com.yedam.control.LogoutControl;
@@ -66,7 +67,9 @@ public class FrontController extends HttpServlet {
 		//기타
 		map.put("/chartData.do", new ChartControl()); 
 		//fullcalendar 목록
-		map.put("/eventList.do", new EventControl()); 
+		map.put("/eventList.do", new EventControl()); //이벤트목록
+	//위에먼저	map.put("/addEvent.do", new AddEventControl()); //이벤트등록 {retcode:"OK"/"NG"}
+		
 	}
 	
 	@Override

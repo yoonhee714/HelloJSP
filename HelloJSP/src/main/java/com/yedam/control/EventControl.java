@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.yedam.common.Control;
 
-public class JSControl implements Control {
+public class EventControl implements Control {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 
-			req.getRequestDispatcher("WEB-INF/html/js.jsp").forward(req, resp);
 	}
 
 }

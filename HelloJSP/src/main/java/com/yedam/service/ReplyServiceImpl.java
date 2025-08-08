@@ -44,11 +44,4 @@ public class ReplyServiceImpl implements Replyservice {
 		return r;
 	}
 
-	@Override
-	public List<ReplyVO> evenList() {
-	
-		return = mapper.evenList(title,startDate,endDate);
-	}
-
-
 }

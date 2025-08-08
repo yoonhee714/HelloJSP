@@ -5,15 +5,18 @@
 <script src='../dist/index.global.js'></script>
 <script>
 
-  document.addEventListener('DOMContentLoaded', function() {
+  	document.addEventListener('DOMContentLoaded', function() {
+
+	//값을 담을 변수 선언  
 	let eventsList = [
 		{title:"test",start:"2023-01-04"}
 	];
+	//ajax실행
 	fetch('eventList.do')
 		.then(resolve => resolve.json())
 		.then(result => {
 			eventList = result;
-			console.log(result);
+			console.log(eventList);
 		
 	
     var calendarEl = document.getElementById('calendar');
@@ -29,14 +32,20 @@
       selectable: true,
       selectMirror: true,
       select: function(arg) {
-        var title = prompt('Event Title:');
+    	  console.log(arg); //title, start, end
+        var title = prompt('일정을 등록하세요');
         if (title) {
+        	fetch('addEvent.do?title='+title+'&start='+arg.startStr+'&end='+arg.endStr)
+        	   .then(resolve => resolve.json())
+        	   .then()
+        	   .catch()
+        	//캘린더에 일정을 추가
           calendar.addEvent({
             title: title,
             start: arg.start,
             end: arg.end,
             allDay: arg.allDay
-          })
+          }) //일정추가
         }
         calendar.unselect()
       },
